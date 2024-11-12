@@ -7,7 +7,7 @@
 
 using namespace std;
 
-void filterEvens(int*);        //Declare function filterEvens
+void filterEvens(int [], int);        //Declare function filterEvens
 void dna_to_rna(string);        //Declare function dna_to_rna
 
 int main() {
@@ -17,7 +17,7 @@ int main() {
     for(int iter = 0; iter < 8; iter++)        //For each user input
         cin >> myArray[iter];        //Store to the array
 
-    filterEvens(myArray);        //Filters evens
+    filterEvens(myArray, 8);        //Filters evens
 
     for(int iter = 0; iter < 10; iter++) {        //For each salesperson
         total += cars[iter];        //Add to total
@@ -33,8 +33,8 @@ int main() {
     return 0;        //Exits successfully
 }
 
-void filterEvens(int* array) {        //Function for filtering evens
-    for(int iter = 1; iter < 8; iter++) {        //For all items in array
+void filterEvens(int array[], int array_length) {        //Function for filtering evens
+    for(int iter = 1; iter < array_length; iter++) {        //For all items in array
         if ((array[iter] % 2) == 0)        //If even
             cout << array[iter] << " ";        //Output value
     }
@@ -60,8 +60,3 @@ The total number of cars sold is 58.
 The best salesperson is Salesperson #5 with 14 cars sold!
 CGAAACAACG
 */
-
-
-
-
-
